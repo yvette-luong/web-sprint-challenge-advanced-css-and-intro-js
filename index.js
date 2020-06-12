@@ -244,10 +244,10 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
  */
-// function getArtistByIndex(array, index) {
-//    return `The artist at index ${array[index].id} is ${array[index].name}.`
-//   }
-// console.log(getArtistByIndex(artists,0))
+function getArtistByIndex(array, index) {
+   return `The artist at index ${array[index].id} is ${array[index].name}.`
+  }
+console.log(getArtistByIndex(artists,0))
 
 /**
 
@@ -264,7 +264,7 @@ function get20s(artists) {
     const string = artist.years.split("-");
     const birthYear = string[0];
     const deathYear = string[1];
-    if (birthYear > 1899 && deathYear > 1900) return artist.name;
+    if (deathYear > 1900) return artist.name;
   });
   return newArr;
 }
